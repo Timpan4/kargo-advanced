@@ -15,7 +15,10 @@ spec:
         app: guestbook
     spec:
       containers:
-      - image: ghcr.io/timpan4/guestbook:v0.1.1
+      - env:
+        - name: FOO
+          value: bar
+        image: ghcr.io/timpan4/guestbook:v0.1.2
         name: guestbook
         ports:
         - containerPort: 3000
